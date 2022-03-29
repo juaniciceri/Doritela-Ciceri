@@ -60,6 +60,16 @@ body {
 .nav__logo {
     font-size: 1.8rem;
     font-weight: 300;
+    animation: bounce1 5s alternate infinite ease-in;
+}
+
+@keyframes bounce1{
+    0%{
+        transform: translateX(-20%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
 }
 
 .nav__menu {
@@ -171,7 +181,7 @@ body {
 }
 
 .gallery__picture::before {
-    content: "Text";
+    content: "Doritela";
     position: absolute;
     top: 0;
     bottom: 0;
@@ -194,6 +204,8 @@ body {
 .gallery__picture--g1 {
     grid-area: img1;
 }
+   
+
 
 .gallery__picture--g2 {
     grid-area: img2;
