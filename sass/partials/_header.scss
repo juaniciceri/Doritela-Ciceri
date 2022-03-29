@@ -1,0 +1,70 @@
+header {
+    .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .hero {
+        background-image: linear-gradient(-20deg, #ddd6f3 0%, #faaca8 100%, #faaca8 100%);
+        color: #fff;
+        display: grid;
+        grid-template-rows: max-content 1fr;
+        grid-template-areas:
+            "nav"
+            "content";
+        min-height: 100vh;
+    }
+
+    @media (max-width: 800px) {
+        .hero {
+            background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
+        }
+    }
+
+    .nav {
+        grid-area: nav;
+        display: grid;
+        justify-content: space-between;
+        grid-auto-flow: column;
+        gap: 1em;
+        align-items: center;
+        height: 90px;
+
+        &__list {
+            list-style: none;
+            display: grid;
+            grid-auto-flow: column;
+            gap: 1em;
+
+            &__link {
+                color: #fff;
+                text-decoration: none;
+
+                &__logo {
+                    font-size: 1.8rem;
+                    font-weight: 300;
+                    animation: bounce1 5s alternate infinite ease-in;
+
+                    &__menu{
+                        display: none;
+                    }
+
+                    &__icon{
+                        width: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes bounce1{
+    0%{
+        transform: translateX(-20%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
