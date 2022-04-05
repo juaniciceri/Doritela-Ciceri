@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../syles.css">
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 
 <body>
@@ -14,14 +14,17 @@
         <nav class="nav container">
             <h2 class="nav__logo">Doritela</h2>
             <ul class="nav__list">
-                <li class="nav__item"><a href="./index.html" class="nav__link">Inicio</a></li>
+                <li class="nav__item"><a href="../index.html" class="nav__link">Inicio</a></li>
                 <li class="nav__item"><a href="./productos.html" class="nav__link">Productos</a></li>
                 <li class="nav__item"><a href="./contacto.html" class="nav__link">Contacto</a></li>
                 <li class="nav__item"><a href="./sobre.html" class="nav__link">Somos Doritela</a></li>
                 <li class="nav__item"><a href="./precios.html" class="nav__link">Precios</a></li>
             </ul>
             <figure class="nav__menu">
-                <img src="images/menu.svg" class="nav__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
+                    <path d="M4 6h16v2H4zm4 5h12v2H8zm5 5h7v2h-7z"></path>
+                </svg>
             </figure>
         </nav>
         <section class="hero__main container">
@@ -29,13 +32,13 @@
                 <h1 class="hero__title">¿Como puedo comprar?</h1>
                 <p class="hero__subtitle">Si estás interesada/o en adquirir algún producto, nos podes hablar vía
                     Instagram📷 @Doritela.ba o envíarnos un mensaje al 11 #### ####📱.</p>
-                    <h1 class="hero__title">Medios de pago</h1>
-                    <p class="hero__subtitle">💵Los pagos se realizan mediante transferencia, mercado pago o efectivo.</p>
-                    <h1 class="hero__title">Envíos</h1>
-                    <p class="hero__subtitle">🏍️Los envíos quedarán a cargo del comprador.
-                        En el caso de querer retirarlos, nos encontramos en Saavedra (CABA).
-                    </p>
-                        <a href="./productos.html" class="hero__cta">Mira nuestros productos!</a>
+                <h1 class="hero__title">Medios de pago</h1>
+                <p class="hero__subtitle">💵Los pagos se realizan mediante transferencia, mercado pago o efectivo.</p>
+                <h1 class="hero__title">Envíos</h1>
+                <p class="hero__subtitle">🏍️Los envíos quedarán a cargo del comprador.
+                    En el caso de querer retirarlos, nos encontramos en Saavedra (CABA).
+                </p>
+                <a href="./productos.html" class="hero__cta">Mira nuestros productos!</a>
             </div>
             <figure class="hero__picture">
                 <img src="../images/Online payment_Isometric.svg" class="hero__img">
@@ -43,12 +46,34 @@
 
         </section>
 
-
+        <footer>
+            <div class="waves">
+                <div class="wave" id="wave1"></div>
+                <div class="wave" id="wave2"></div>
+                <div class="wave" id="wave3"></div>
+                <div class="wave" id="wave4"></div>
+            </div>
+            <ul class="social_icon">
+                <li><a href="#">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a></li>
+                <li><a href="#">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a></li>
+                <li><a href="#">
+                        <ion-icon name="call-outline"></ion-icon>
+                    </a></li>
+            </ul>
+    
+            <p>©2022 Doritela Todos Los Derechos Reservados</p>
+        </footer>
     </header>
 
-    <div class="footer">
-        <footer>Derechos reservados a Doritela 2022</footer>
-    </div>
+    
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
 </body>
 
 </html>
