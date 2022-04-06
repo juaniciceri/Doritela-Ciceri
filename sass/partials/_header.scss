@@ -6,12 +6,25 @@ $color_rose_bud_approx: #faaca8;
 $white: white;
 $pink: pink;
 
+//fonts
+$font_0: Urbanist;
+$font_1: sans-serif;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: $font_0, $font_1;
+}
+
 header {
     background-image: linear-gradient(-20deg, $color_moon_raker_approx 0, $color_rose_bud_approx 100%, $color_rose_bud_approx 100%);
     color: $white;
     display: grid;
     grid-template-rows: max-content 1fr;
-    grid-template-areas: "nav""content";
+    grid-template-areas: "nav" "content";
     min-height: 100vh;
 
     .container {
