@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100;300;500&display=swap');
 
-:root{
+:root {
     /* COLORS */
     --primary: linear-gradient(-20deg, #ddd6f3 0%, #faaca8 100%, #faaca8 100%);
     --color: white;
@@ -20,14 +20,14 @@ body {
 /*HEADER*/
 
 header {
-   background-image: linear-gradient(-20deg, #ddd6f3 0%, #faaca8 100%, #faaca8 100%);
-   color: white;
-   display: grid;
-   grid-template-rows: max-content 1fr;
-   grid-template-areas:
-       "nav"
-       "content";
-   min-height: 100vh;
+    background-image: linear-gradient(-20deg, #ddd6f3 0%, #faaca8 100%, #faaca8 100%);
+    color: white;
+    display: grid;
+    grid-template-rows: max-content 1fr;
+    grid-template-areas:
+        "nav"
+        "content";
+    min-height: 100vh;
 }
 
 header .container {
@@ -38,13 +38,13 @@ header .container {
 }
 
 
-@media (max-width: 800px){
-    .hero{
+@media (max-width: 800px) {
+    .hero {
         background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
     }
 }
 
- header .nav{
+header .nav {
     grid-area: nav;
     display: grid;
     justify-content: space-between;
@@ -54,7 +54,7 @@ header .container {
     height: 90px;
 }
 
- header .nav__list {
+header .nav__list {
     list-style: none;
     display: grid;
     grid-auto-flow: column;
@@ -72,11 +72,12 @@ header .nav__logo {
     animation: bounce1 5s alternate infinite ease-in;
 }
 
-@keyframes bounce1{
-    0%{
+@keyframes bounce1 {
+    0% {
         transform: translateX(-10%);
     }
-    100%{
+
+    100% {
         transform: translateX(10%);
     }
 }
@@ -215,7 +216,7 @@ header .title {
 .gallery__picture--g1 {
     grid-area: img1;
 }
-   
+
 
 
 .gallery__picture--g2 {
@@ -405,15 +406,9 @@ tr:hover {
 /* FOOTER*/
 
 
- .body{
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    min-height: 100vh;
-    background: #333;
 
-}
-footer{
+
+footer {
     position: relative;
     width: 100%;
     background: transparent;
@@ -424,8 +419,9 @@ footer{
     align-items: center;
     flex-direction: column;
 }
+
 footer .social_icon,
-footer .menu{
+footer .menu {
     position: relative;
     display: flex;
     justify-content: center;
@@ -435,11 +431,11 @@ footer .menu{
 }
 
 footer .social_icon li,
-footer .menu li{
+footer .menu li {
     list-style: none;
 }
 
-footer .social_icon  li a{
+footer .social_icon li a {
     font-size: 2em;
     color: #fff;
     margin: 0 10px;
@@ -447,11 +443,11 @@ footer .social_icon  li a{
     transition: 0.5s;
 }
 
-footer .social_icon li a:hover{
+footer .social_icon li a:hover {
     transform: translateY(-10px);
 }
 
-footer .menu  li a{
+footer .menu li a {
     font-size: 1.2em;
     color: #fff;
     margin: 0 10px;
@@ -461,15 +457,94 @@ footer .menu  li a{
     opacity: 0.75;
 }
 
-footer .menu li a:hover{
+footer .menu li a:hover {
     opacity: 1;
 }
 
-footer p{
+footer p {
     color: #fff;
     text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
     font-size: 1.1em;
+}
+
+
+/* TARJETA */
+
+
+
+.card {
+    position:relative;
+    width: 300px;
+    height: 350px;
+}
+
+.card .face {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.card .front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .front h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    background: rgba(0, 0, 0, .4);
+    text-align: center;
+}
+
+.card .back {
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(3, 35, 54);
+    padding: 15px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+}
+
+.card .back .link {
+    border-top: solid 1px #f3f3f3;
+    height: 50px;
+    line-height: 50px;
+}
+
+.card .back .link a {
+    color: #f3f3f3;
+}
+
+.card .back h3 {
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+.card .back p {
+    letter-spacing: 1px;
+}
+
+.card:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .back {
+    transform: perspective(600px) rotateY(360deg);
 }
 
