@@ -1,0 +1,51 @@
+//colors
+$color_classic_rose_approx: #fdcbf1;
+$color_snuff_approx: #e6dee9;
+
+.menu-icon {
+	display: none;
+	img {
+		width: 30px;
+		height: 30px;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 2px;
+	}
+}
+#check {
+	display: none;
+}
+@media(max-width:801px) {
+	.checkbtn {
+		display: block;
+	}
+	.menu-icon {
+		display: block;
+		position: fixed;
+		top: 20px;
+		right: 20px;
+		cursor: pointer;
+	}
+	.container ul {
+		display: block;
+		position: fixed;
+		top: 70px;
+		left: -100%;
+		background: linear-gradient(to top, $color_classic_rose_approx 0, $color_classic_rose_approx 1%, $color_snuff_approx 100%);
+		width: 100%;
+		height: 100vh;
+		right: 0;
+		li {
+			padding: 2rem;
+			display: flex;
+			justify-content: center;
+			margin: 0;
+			&:last-child {
+				background: none;
+				padding: 1rem;
+			}
+		}
+	}
+	#check:checked ~ ul {
+		left: 0;
+	}
+}

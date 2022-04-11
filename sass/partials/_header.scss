@@ -13,159 +13,183 @@ $font_1: sans-serif;
 * {
 	margin: 0;
 	padding: 0;
+	//Instead of the line below you could use @include box-sizing($bs)
 	box-sizing: border-box;
 }
 body {
 	font-family: $font_0, $font_1;
 }
-
 header {
-    background-image: linear-gradient(-20deg, $color_moon_raker_approx 0, $color_rose_bud_approx 100%, $color_rose_bud_approx 100%);
-    color: $white;
-    display: grid;
-    grid-template-rows: max-content 1fr;
-    grid-template-areas: "nav" "content";
-    min-height: 100vh;
-
-    .container {
-        width: 90%;
-        max-width: 1200px;
-        margin: 0 auto;
-        overflow: hidden;
-    }
-
-    .nav {
-        grid-area: nav;
-        display: grid;
-        justify-content: space-between;
-        grid-auto-flow: column;
-        gap: 1em;
-        align-items: center;
-        height: 90px;
-    }
-
-    .nav__list {
-        list-style: none;
-        display: grid;
-        grid-auto-flow: column;
-        gap: 1em;
-    }
-
-    .nav__link {
-        color: var(--color);
-        text-decoration: none;
-    }
-
-    .nav__logo {
-        font-size: 1.8rem;
-        font-weight: 300;
-        animation: bounce1 5s alternate infinite ease-in;
-    }
-
-    .nav__menu {
-        display: none;
-    }
-
-    .nav__icon {
-        width: 30px;
-    }
-
-    .hero__main {
-        grid-area: content;
-        display: grid;
-        gap: 2em;
-        grid-template-columns: 1fr 1fr;
-        padding-bottom: 180px;
-        align-items: center;
-    }
-
-    .hero__waves {
-        grid-area: content;
-        align-self: end;
-    }
-
-    .hero__title {
-        font-size: 2.6rem;
-        letter-spacing: 2px;
-    }
-
-    .hero__subtitle {
-        margin-top: 1rem;
-        margin-bottom: 1.5rem;
-        font-size: 1.5rem;
-        font-weight: 300;
-    }
-
-    .hero__cta {
-        text-decoration: none;
-        color: var(--color);
-        padding: 15px 60px;
-        border: 1px solid;
-
-        border-radius: 6px;
-        display: inline-block;
-        font-weight: 500;
-
-        transition: background-color .3s;
-
-        &:hover {
-            background-color: $white;
-            color: $pink;
-        }
-    }
-
-    .hero__img {
-        width: 100%;
-    }
-
-    .title {
-        text-align: center;
-        font-size: 3rem;
-        padding: .8rem;
-    }
+	background-image: linear-gradient(-20deg, $color_moon_raker_approx 0, $color_rose_bud_approx 100%, $color_rose_bud_approx 100%);
+	color: $white;
+	display: grid;
+	grid-template-rows: max-content 1fr;
+	grid-template-areas: "nav" "content";
+	min-height: 100vh;
+	.container {
+		width: 90%;
+		max-width: 1200px;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	.nav {
+		grid-area: nav;
+		display: grid;
+		justify-content: space-between;
+		grid-auto-flow: column;
+		gap: 1em;
+		align-items: center;
+		height: 90px;
+	}
+	.nav__list {
+		list-style: none;
+		display: grid;
+		grid-auto-flow: column;
+		gap: 1em;
+	}
+	.nav__link {
+		color: var(--color);
+		text-decoration: none;
+	}
+	.nav__logo {
+		font-size: 1.8rem;
+		font-weight: 300;
+		animation: bounce1 5s alternate infinite ease-in;
+	}
+	.nav__menu {
+		display: none;
+	}
+	.nav__icon {
+		width: 30px;
+	}
+	.hero__main {
+		grid-area: content;
+		display: grid;
+		gap: 2em;
+		grid-template-columns: 1fr 1fr;
+		padding-bottom: 180px;
+		align-items: center;
+	}
+	.hero__waves {
+		grid-area: content;
+		align-self: end;
+	}
+	.hero__title {
+		font-size: 2.6rem;
+		letter-spacing: 2px;
+	}
+	.hero__subtitle {
+		margin-top: 1rem;
+		margin-bottom: 1.5rem;
+		font-size: 1.5rem;
+		font-weight: 300;
+	}
+	.hero__cta {
+		text-decoration: none;
+		color: var(--color);
+		padding: 15px 60px;
+		border: 1px solid;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 6px;
+		display: inline-block;
+		font-weight: 500;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: background-color .3s;
+		&:hover {
+			background-color: $white;
+			color: $pink;
+		}
+	}
+	.hero__img {
+		width: 100%;
+	}
+	.title {
+		text-align: center;
+		font-size: 3rem;
+		padding: .8rem;
+	}
 }
-
 @media(max-width: 800px) {
-    .hero {
-        background-image: linear-gradient(to top, $color_classic_rose_approx 0, $color_classic_rose_approx 1%, $color_snuff_approx 100%);
-    }
+	.hero {
+		background-image: linear-gradient(to top, $color_classic_rose_approx 0, $color_classic_rose_approx 1%, $color_snuff_approx 100%);
+	}
 }
-
 @keyframes bounce1 {
-    0% {
-
-        transform: translateX(-10%);
-    }
-
-    100% {
-
-        transform: translateX(10%);
-    }
+	0% {
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translateX(-10%);
+	}
+	100% {
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: translateX(10%);
+	}
 }
-
 @media(max-width:800px) {
-    header {
-        .nav__list {
-            display: none;
-        }
-
-        .nav__menu {
-            display: block;
-        }
-
-        .hero__main {
-            grid-template-columns: 1fr;
-            grid-template-rows: max-content max-content;
-        }
-
-        .hero_picture {
-            grid-row: 1/2;
-        }
-
-        .hero__img {
-            max-width: 500px;
-            display: block;
-            margin: 0 auto;
-        }
-    }
+	header {
+		.nav__list {
+			display: none;
+		}
+		.nav__menu {
+			display: block;
+		}
+		.hero__main {
+			grid-template-columns: 1fr;
+			grid-template-rows: max-content max-content;
+		}
+		.hero_picture {
+			grid-row: 1/2;
+		}
+		.hero__img {
+			max-width: 500px;
+			display: block;
+			margin: 0 auto;
+		}
+	}
+}
+.menu-icon {
+	display: none;
+	img {
+		width: 30px;
+		height: 30px;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 2px;
+	}
+}
+#check {
+	display: none;
+}
+@media(max-width:800px) {
+	.checkbtn {
+		display: block;
+	}
+	.menu-icon {
+		display: block;
+		position: fixed;
+		top: 20px;
+		right: 20px;
+		cursor: pointer;
+	}
+	.container ul {
+		display: block;
+		position: fixed;
+		top: 70px;
+		left: -100%;
+		background: linear-gradient(to top, $color_classic_rose_approx 0, $color_classic_rose_approx 1%, $color_snuff_approx 100%);
+		width: 100%;
+		height: 100vh;
+		right: 0;
+		li {
+			padding: 2rem;
+			display: flex;
+			justify-content: center;
+			margin: 0;
+			&:last-child {
+				background: none;
+				padding: 1rem;
+			}
+		}
+	}
+	#check:checked ~ ul {
+		left: 0;
+	}
 }
